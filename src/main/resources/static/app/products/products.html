@@ -1,0 +1,27 @@
+<div class="col-sm-3">
+
+  <div class="row">
+    <div class="navbar-products">
+      <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+          <li><a ng-click="addProduct($event)"><span class="glyphicon glyphicon-plus"></span></a></li>
+          <li><a ng-click="updateProduct($event)"><span class="glyphicon glyphicon-pencil"></span></a></li>
+          <li><a ng-click="removeProduct($event)"><span class="glyphicon glyphicon-trash"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li><a ng-click="treeControl.expand_all()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+          <li><a ng-click="treeControl.collapse_all()"><span class="glyphicon glyphicon-chevron-up"></span></a></li>
+        </ul>
+      </nav>
+      <input type="text" placeholder="Digite para filtrar" ng-change="filterProducts()" ng-model="searchFilter">
+    </div>
+  </div>
+  <abn-tree tree-data="data"
+    tree-control="treeControl"
+    expand-level="1"
+    icon-expand="icon-plus glyphicon glyphicon-triangle-right fa fa-plus"
+    icon-collapse="icon-plus glyphicon glyphicon-triangle-bottom fa fa-plus"
+    icon-leaf=""
+    expand-level="2"
+  ></abn-tree>
+</div>

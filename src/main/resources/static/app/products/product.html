@@ -1,0 +1,29 @@
+<md-dialog aria-label="Produto">
+  <md-content layout-padding>
+      <form name="productForm" ng-submit="answer()">
+        <input type="hidden" ng-model="product.id" ng-model="product.id"/>
+        <md-input-container class="md-block">
+          <label>Código</label>
+          <input required md-no-asterisk name="code" ng-model="product.code">
+          <div ng-messages="productForm.code.$error">
+            <div ng-message="required">Campo obrigatório.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Descrição</label>
+          <input required md-no-asterisk name="description" ng-model="product.label">
+          <div ng-messages="productForm.description.$error">
+            <div ng-message="required">Campo obrigatório.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Observação</label>
+          <input name="observation" ng-model="product.observation">
+        </md-input-container>
+        <div>
+          <md-button type="submit" ng-submit="hide()">Salvar</md-button>
+        </div>
+
+      </form>
+  </md-content>
+</md-dialog>
